@@ -38,7 +38,7 @@ exports.addBook = async (req, res) => {
 
         axios.post('http://localhost:3001/info', book)
             .then(
-                () => console.log("SENT TO THE TELEGRAM BOT SERVER!"))
+                () => console.log("Salem From Amina!"))
             .catch(error => {
                 console.error('Error sending request:', error);}
             );
