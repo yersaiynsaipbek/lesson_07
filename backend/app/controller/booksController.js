@@ -1,7 +1,11 @@
+// eslint-disable-next-line no-undef
 const bookService = require('../services/bookService');
+// eslint-disable-next-line no-undef
 const HttpStatus = require('http-status');
+// eslint-disable-next-line no-undef
 const axios = require("axios");
 
+// eslint-disable-next-line no-undef
 exports.getAllBooks = async (req, res) => {
     try {
         const priceParam = req.query.price;
@@ -31,6 +35,7 @@ exports.getAllBooks = async (req, res) => {
     }
 };
 
+// eslint-disable-next-line no-undef
 exports.addBook = async (req, res) => {
     try {
         const book = req.body;
@@ -38,7 +43,7 @@ exports.addBook = async (req, res) => {
 
         axios.post('http://localhost:3001/info', book)
             .then(
-                () => console.log("Salem From Amina!"))
+                () => console.log("Salem From Anuar!"))
             .catch(error => {
                 console.error('Error sending request:', error);}
             );
@@ -53,6 +58,7 @@ exports.addBook = async (req, res) => {
     }
 };
 
+// eslint-disable-next-line no-undef
 exports.updateBook = async (req, res) => {
     try {
         const bookId = req.params.id;
@@ -70,6 +76,7 @@ exports.updateBook = async (req, res) => {
     }
 };
 
+// eslint-disable-next-line no-undef
 exports.deleteBook = async (req, res) => {
     try {
         const bookId = req.params.id;
